@@ -1,0 +1,143 @@
+html{
+scroll-behavior: smooth;
+}
+body{
+    background-color: black;
+}
+:root{
+    --main_color:red;
+}
+*{ 
+    text-decoration: none;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+}.container{
+        
+    padding: 15px 15px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden; 
+}
+@media (min-width:768px){
+    .container{
+            width: 750px;
+    }
+}
+@media (min-width:992px){
+    .container{
+            width: 970px;
+    }
+}
+@media (min-width:768px){
+    .container{
+            width: 750px;
+    }
+}
+@media (min-width:1200px){
+    .container{
+            width: 1170px;
+    }
+}
+/* start header */
+/* header{
+
+} */
+header .container{
+    position: relative;
+    min-height: 98.09px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    position: relative;
+}
+header .container::after{
+    content: "";
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    width: calc(100% - 30px);
+    height: 2px;
+    background-color: white;
+}
+header .container nav{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: white;
+}
+header .container img{
+    height: 44px;
+}
+
+header .container nav ul{
+    display: flex;
+    gap: 12px;
+}
+@media (max-width:767px){
+    header .container nav ul{
+        display: none;
+    }
+}
+header nav .menue{
+font-size: 30px;
+color: red;
+}
+@media (min-width:767px){
+    header nav .menue{
+    display: none;
+}
+}
+header nav .menue:hover + ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column ;
+    position: absolute;
+    top:100% ;
+    left: 0;
+    width: 100%;
+    background-color: aqua;
+    
+}
+
+
+
+header .container nav ul li a{
+    display: block;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 40px 10px;
+    position: relative;
+}
+header .container nav ul li a.active,
+header .container nav ul li a:hover{
+    color: var(--main_color);
+    border-bottom: 2px solid var(--main_color);
+    z-index: 11;
+}
+header .form{
+    width: 40px;
+    height: 30px;
+    position: relative;
+    margin-left: 40px;
+    border-left: 2px solid white;
+
+    
+    
+
+}
+header .form i{
+    color: white;
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+
+}
